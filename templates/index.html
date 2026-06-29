@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>AI Travel Planner</title>
+
+</head>
+
+<body>
+
+<h1>AI Travel Planner Agent</h1>
+
+<form action="/generate" method="POST">
+
+Destination
+
+<input type="text"
+name="destination">
+
+<br><br>
+
+Budget
+
+<input
+type="text"
+name="budget">
+
+<br><br>
+
+Days
+
+<input
+type="number"
+name="days">
+
+<br><br>
+
+Interests
+
+<input
+type="text"
+name="interests">
+
+<br><br>
+
+<input
+type="submit"
+value="Generate Plan">
+
+</form>
+
+{% if result %}
+
+<h2>Travel Plan</h2>
+
+<pre>{{ result }}</pre>
+
+{% endif %}
+
+</body>
+
+</html>
